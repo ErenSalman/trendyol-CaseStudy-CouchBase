@@ -1,0 +1,3 @@
+[cluster]
+192.168.4.64 ansible_hostname=server-eren-salman2-3 ansible_user=root
+192.168.4.50 ansible_hostname=server-eren-salman-0 ansible_user=root

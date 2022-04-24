@@ -1,0 +1,18 @@
+---
+- hosts: all
+  become: true
+  become_user: root
+  vars:
+    couchbase_os:
+      firewalld: false
+      disable_thp: true
+      common_tools: true
+      kernel_tunings: true
+      user_limits: true
+    couchbase_cluster:
+      name: couchbase_cluster_es
+    couchbase_nodes:
+      - hostname: 192.168.4.64
+      - hostname: 192.168.4.50
+  roles:
+    - couchbaselabs.couchbase_server
